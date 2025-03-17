@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
             }
         })
 
-        if(!createdUser){
+        if(createdUser){
             return NextResponse.json({
                 message: "Succesfully registered! Try logging in"
             }, {

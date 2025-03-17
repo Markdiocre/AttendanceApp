@@ -7,7 +7,9 @@ async function handleZodError(err: z.ZodError) {
         details: err.errors.map(r => ({
             field: r.path.join("."),
             message: r.message
-        }))
+        })),
+    },{
+        status: 400
     })
 }
 
